@@ -1,8 +1,9 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-require_once Kohana::find_file('vendor', 'php-aws/class.s3');
+// Include the SDK
+require_once Kohana::find_file('vendor', 'sdk.class');
 
-class Amazon_S3 extends S3
+class Amazon_S3 extends AmazonS3
 {
 	public function __construct() 
 	{
